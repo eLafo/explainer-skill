@@ -102,6 +102,18 @@
       "prompt": "/skill:explainer --target markdown reescribe en inglés sencillo inspirado en ASD-STE100: «Antes de apagar el equipo, comprueba que la presión es 0 bar. Si no lo es, no abras la válvula»",
       "expected_output": "Markdown en inglés que mantiene 0 bar, la condición y la prohibición del original; aplica el perfil predeterminado.",
       "assertions": ["El contenido del bloque Markdown está en inglés", "Conserva literalmente 0 bar", "Prohíbe abrir la válvula cuando la presión no es 0 bar"]
+    },
+    {
+      "id": 18,
+      "prompt": "/skill:explainer --profile plain-language --target chat --language es reescribe para el destinatario sin perder condiciones: Si desea recurrir, debe presentar alegaciones en un plazo de 10 días hábiles. Si supera ese plazo, no se estudiarán.",
+      "expected_output": "Explicación en español que permite entender qué hacer y qué ocurre después del plazo, sin afirmar conformidad oficial.",
+      "assertions": ["Conserva 10 días hábiles", "Conserva la condición y la consecuencia de superar el plazo", "No inventa otro plazo ni un trámite nuevo"]
+    },
+    {
+      "id": 19,
+      "prompt": "/skill:explainer --profile plain-language --framework pyramid --target markdown resume con claridad sin omitir límites: El equipo funciona entre 0 y 40 °C. Si la temperatura supera 40 °C, apáguelo. No lo reinicie hasta que baje a 40 °C o menos.",
+      "expected_output": "Un bloque Markdown copiable, con la indicación principal al inicio y todas las condiciones y unidades preservadas.",
+      "assertions": ["Entrega un único bloque Markdown", "Conserva 0 y 40 °C", "Mantiene la obligación de apagar y la condición para reiniciar", "No afirma conformidad ISO"]
     }
   ]
 }

@@ -6,6 +6,7 @@ Usa este directorio para rastrear **qué afirma cada perfil o framework sobre un
 
 - **ASD-STE100:** `references/sources/asd-ste100.md`. Páginas oficiales del ASD Simplified Technical English Maintenance Group (STEMG). Respaldan qué es el estándar, su estructura, ejemplos de vocabulario y cómo pedir la edición oficial.
 - **Golden Circle / why-how-what:** `references/sources/golden-circle.md`. Página de Simon Sinek sobre WHY, HOW y WHAT. El framework de Explainer es una adaptación explicativa, no una copia normativa del método.
+- **ISO 24495-1:2023 / `plain-language`:** `references/sources/iso-24495-1.md`. El catálogo oficial de ISO es inaccesible desde este entorno (403); las pautas se apoyan en el resumen público de la Federación Internacional de Lenguaje Claro, promotora del estándar. No se ha comprobado la norma íntegra.
 
 ## Sin especificación oficial verificada en esta skill
 
