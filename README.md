@@ -17,3 +17,7 @@ npx skills add elafo/explainer-skill --skill explainer
 ```
 
 La instalación es local al proyecto; añade `-g` para instalarla de forma global. Revisa el contenido de la skill antes de instalarla. La instalación desde GitHub no fija automáticamente una versión de release.
+
+## Versiones
+
+Este repositorio usa [release-please](https://github.com/googleapis/release-please-action) y commits convencionales para proponer versiones. El push inicial puede abrir una PR de release; **solo al fusionarla** se crea la etiqueta y la GitHub Release. La versión inicial prevista es `0.1.0`.
