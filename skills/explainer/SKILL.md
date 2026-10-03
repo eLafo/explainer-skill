@@ -17,7 +17,7 @@ Organiza una explicación sin confundir cuatro decisiones: **qué se sabe** (fue
 
 Los argumentos son convenciones que interpreta el agente, **no** flags de un parser ejecutable. También se aceptan peticiones equivalentes en lenguaje natural.
 
-- `--profile <id>`: reglas lingüísticas o pedagógicas; por defecto `asd-ste100` **solo si no se pide otro perfil**. «Lenguaje claro», «lenguaje simple» o «plain language» seleccionan `plain-language`; «como Feynman» selecciona `feynman`. «Lectura fácil» validada es una petición distinta: no la equipares automáticamente a lenguaje claro. Consulta `references/profiles/README.md` y **lee siempre** `references/profiles/<id>.md` antes de redactar, también para respuestas cortas.
+- `--profile <id>`: reglas lingüísticas o pedagógicas; por defecto `plain-language` **si no se pide otro perfil**. «Lenguaje claro», «lenguaje simple» o «plain language» seleccionan `plain-language`; «como Feynman» selecciona `feynman`; «siguiendo ASD-STE100» o una instrucción equivalente selecciona `asd-ste100`. Mencionar ASD-STE100 como **tema** no basta para elegir ese perfil. «Lectura fácil» validada es una petición distinta: no la equipares automáticamente a lenguaje claro. Consulta `references/profiles/README.md` y **lee siempre** `references/profiles/<id>.md` antes de redactar, también para respuestas cortas.
 - `--framework <id>`: recorrido narrativo; por defecto `auto` (no fuerza un relato). Consulta `references/frameworks/README.md` y lee la referencia completa del framework elegido.
 - `--form`: forma del documento; `auto` (predeterminado) deja que el contenido determine el formato de organización, `article` usa secciones, `faq` usa preguntas y respuestas, `procedure` organiza **solo acciones presentes en la fuente** en pasos ordenados. La forma no aporta hechos nuevos.
 - `--target`: `chat` (predeterminado), `markdown` (bloque copiable, con archivo opcional) o `html` (archivo completo). Lee `references/targets.md` para la entrega y su verificación.
@@ -33,7 +33,7 @@ Los argumentos son convenciones que interpreta el agente, **no** flags de un par
 
 - `--profile asd-ste100 --framework why-how-what --target chat --language es explica ASD-STE100` → respuesta en el chat con redacción clara en español.
 - `--profile feynman --target chat explica este concepto a principiantes` → explicación pedagógica sin perder precisión.
-- `--profile plain-language --target chat --language es aclara esta carta para sus destinatarios` → lenguaje claro sin omitir condiciones.
+- `--target chat --language es aclara esta carta para sus destinatarios` → lenguaje claro por defecto, sin omitir condiciones.
 - `--framework pyramid --target markdown --file ./resumen.md explica este informe` → bloque Markdown copiable y el mismo contenido en un archivo.
 - `--framework scqa --target html explica este problema` → archivo HTML autónomo, siempre que el problema esté documentado.
 

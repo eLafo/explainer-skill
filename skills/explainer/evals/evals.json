@@ -4,8 +4,8 @@
     {
       "id": 1,
       "prompt": "/skill:explainer --target chat explica ASD-STE100",
-      "expected_output": "Respuesta en español directamente en el chat, sin archivo ni afirmación de conformidad oficial.",
-      "assertions": ["Responde en español", "No crea archivos", "No afirma certificación ni conformidad oficial"]
+      "expected_output": "Respuesta en español y lenguaje claro por defecto, directamente en el chat, sin archivo ni afirmación de conformidad oficial. ASD-STE100 es el tema, no el perfil solicitado.",
+      "assertions": ["Responde en español", "No crea archivos", "No afirma certificación ni conformidad oficial", "No presupone que mencionar ASD-STE100 elige ese perfil"]
     },
     {
       "id": 2,
@@ -100,7 +100,7 @@
     {
       "id": 17,
       "prompt": "/skill:explainer --target markdown reescribe en inglés sencillo inspirado en ASD-STE100: «Antes de apagar el equipo, comprueba que la presión es 0 bar. Si no lo es, no abras la válvula»",
-      "expected_output": "Markdown en inglés que mantiene 0 bar, la condición y la prohibición del original; aplica el perfil predeterminado.",
+      "expected_output": "Markdown en inglés que mantiene 0 bar, la condición y la prohibición del original; aplica el perfil ASD-STE100 solicitado en lenguaje natural, no el predeterminado.",
       "assertions": ["El contenido del bloque Markdown está en inglés", "Conserva literalmente 0 bar", "Prohíbe abrir la válvula cuando la presión no es 0 bar"]
     },
     {
@@ -114,6 +114,18 @@
       "prompt": "/skill:explainer --profile plain-language --framework pyramid --target markdown resume con claridad sin omitir límites: El equipo funciona entre 0 y 40 °C. Si la temperatura supera 40 °C, apáguelo. No lo reinicie hasta que baje a 40 °C o menos.",
       "expected_output": "Un bloque Markdown copiable, con la indicación principal al inicio y todas las condiciones y unidades preservadas.",
       "assertions": ["Entrega un único bloque Markdown", "Conserva 0 y 40 °C", "Mantiene la obligación de apagar y la condición para reiniciar", "No afirma conformidad ISO"]
+    },
+    {
+      "id": 20,
+      "prompt": "/skill:explainer --target chat explica a la persona destinataria este aviso: Puede solicitar una revisión en un plazo de 10 días hábiles. Pasado ese plazo, no se aceptarán solicitudes.",
+      "expected_output": "Respuesta en español con lenguaje claro por defecto: identifica qué puede hacer la persona, el plazo y la consecuencia sin inventar trámites.",
+      "assertions": ["Conserva 10 días hábiles", "Explica la opción de solicitar una revisión y la consecuencia de superar el plazo", "No inventa trámites ni condiciones"]
+    },
+    {
+      "id": 21,
+      "prompt": "/skill:explainer --target chat --language en explain this notice: You may request a review within 10 working days. Requests after that deadline will not be accepted.",
+      "expected_output": "Respuesta en inglés con lenguaje claro por defecto que mantiene la opción, el plazo y la consecuencia.",
+      "assertions": ["Responde en inglés", "Conserva 10 working days", "No convierte la opción en una obligación", "Mantiene la consecuencia del retraso"]
     }
   ]
 }
