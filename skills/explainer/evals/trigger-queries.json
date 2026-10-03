@@ -1,0 +1,14 @@
+[
+  {
+    "query": "Explícame qué es la memoria caché con una analogía sencilla para alguien que empieza a programar.",
+    "should_trigger": true
+  },
+  {
+    "query": "Reescribe esta instrucción en inglés técnico claro siguiendo las pautas de ASD-STE100: Si la presión no es 0 bar, no abra la válvula.",
+    "should_trigger": true
+  },
+  {
+    "query": "Simplifica esta función Python sin cambiar su comportamiento: def doble(x): return x + x",
+    "should_trigger": false
+  }
+]

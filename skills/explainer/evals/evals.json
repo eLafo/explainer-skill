@@ -1,0 +1,107 @@
+{
+  "skill_name": "explainer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/skill:explainer --target chat explica ASD-STE100",
+      "expected_output": "Respuesta en español directamente en el chat, sin archivo ni afirmación de conformidad oficial.",
+      "assertions": ["Responde en español", "No crea archivos", "No afirma certificación ni conformidad oficial"]
+    },
+    {
+      "id": 2,
+      "prompt": "/skill:explainer --framework why-how-what --target markdown explica ASD-STE100",
+      "expected_output": "Un bloque Markdown copiable cuya relevancia inicial no atribuye intenciones inventadas.",
+      "assertions": ["Entrega un único bloque de código etiquetado markdown", "El contenido distingue hechos de motivaciones no demostradas"]
+    },
+    {
+      "id": 3,
+      "prompt": "/skill:explainer --framework pyramid --target markdown --file ./out/resumen.md explica ASD-STE100",
+      "expected_output": "Bloque Markdown y archivo out/resumen.md con contenido idéntico; conclusión sustentada primero.",
+      "assertions": ["El archivo out/resumen.md existe", "El contenido del bloque coincide exactamente con el archivo", "La respuesta principal aparece antes de las razones"]
+    },
+    {
+      "id": 4,
+      "prompt": "/skill:explainer --framework scqa --target chat explica este dato: El equipo se llama A",
+      "expected_output": "No inventa una complicación; explica el límite o cambia explícitamente a organización auto.",
+      "assertions": ["No inventa un problema o conflicto", "Señala que falta la complicación o usa una organización sin SCQA"]
+    },
+    {
+      "id": 5,
+      "prompt": "/skill:explainer --framework what-so-what-now-what --target chat interpreta estos datos: 10, 12",
+      "expected_output": "Distingue los valores observados de causas y recomendaciones no sustentadas.",
+      "assertions": ["Conserva los valores 10 y 12", "No atribuye una causa desconocida", "No presenta una recomendación como obligatoria"]
+    },
+    {
+      "id": 6,
+      "prompt": "/skill:explainer --target html explica ASD-STE100",
+      "expected_output": "Entrega un archivo HTML completo, autónomo y con ruta comunicada al usuario.",
+      "assertions": ["El archivo existe", "Contiene doctype, html lang, title y viewport", "Incluye un límite explícito sobre la conformidad oficial"]
+    },
+    {
+      "id": 7,
+      "prompt": "/skill:explainer --target html --file ./out/explainer-en.html --language en explain ASD-STE100",
+      "expected_output": "Entrega out/explainer-en.html en inglés sin atribuirle certificación oficial.",
+      "assertions": ["El archivo out/explainer-en.html existe", "El html declara lang=en y el texto explicativo está en inglés", "No afirma certificación oficial"]
+    },
+    {
+      "id": 8,
+      "prompt": "/skill:explainer --target video explica ASD-STE100",
+      "expected_output": "Indica que video no es un destino permitido y ofrece chat, markdown y html.",
+      "assertions": ["No afirma haber creado un vídeo", "Menciona los tres destinos disponibles"]
+    },
+    {
+      "id": 9,
+      "prompt": "/skill:explainer --format asd-ste100 --structure faq --target markdown explica ASD-STE100",
+      "expected_output": "Interpreta los alias como perfil y forma; entrega un bloque Markdown con preguntas y respuestas.",
+      "assertions": ["La salida incluye preguntas y respuestas", "La entrega es un bloque Markdown copiable"]
+    },
+    {
+      "id": 10,
+      "prompt": "/skill:explainer --format html explica ASD-STE100",
+      "expected_output": "Aclara que HTML es un destino y sugiere --target html, sin inventar un perfil html.",
+      "assertions": ["Sugiere --target html", "No trata html como perfil válido"]
+    },
+    {
+      "id": 11,
+      "prompt": "/skill:explainer --framework desconocido explica ASD-STE100",
+      "expected_output": "Ofrece los frameworks registrados y pide elegir, sin inventar reglas para desconocido.",
+      "assertions": ["Indica que desconocido no existe", "Incluye las alternativas disponibles"]
+    },
+    {
+      "id": 12,
+      "prompt": "/skill:explainer --form procedure explica qué es ASD-STE100",
+      "expected_output": "No presenta una definición como si fueran pasos de un procedimiento; solicita otra forma.",
+      "assertions": ["No inventa pasos operativos", "Señala el conflicto entre procedimiento y explicación conceptual"]
+    },
+    {
+      "id": 13,
+      "prompt": "/skill:explainer --framework pyramid --keep-structure reescribe esta lista en el mismo orden: A, B",
+      "expected_output": "Conserva el orden solicitado o aclara la prioridad si las dos opciones no son compatibles.",
+      "assertions": ["A precede a B si transforma el texto", "No altera la información de la lista"]
+    },
+    {
+      "id": 14,
+      "prompt": "/skill:explainer --target chat --file ./out/no-debe-crearse.md explica ASD-STE100",
+      "expected_output": "Comunica el conflicto entre chat y archivo; no crea out/no-debe-crearse.md.",
+      "assertions": ["El archivo out/no-debe-crearse.md no existe", "Explica que --file no es válido con chat"]
+    },
+    {
+      "id": 15,
+      "prompt": "/skill:explainer --profile feynman --target chat explica qué es una variable a una persona que empieza a programar",
+      "expected_output": "Explicación pedagógica sencilla y correcta; si usa analogía, la distingue de la definición literal.",
+      "assertions": ["Define variable sin jerga innecesaria", "No presenta una analogía como mecanismo literal"]
+    },
+    {
+      "id": 16,
+      "prompt": "/skill:explainer --profile feynman --framework pyramid --target markdown explica la memoria caché a principiantes",
+      "expected_output": "Bloque Markdown que comienza con la idea principal y la desarrolla para principiantes sin inventar datos.",
+      "assertions": ["Entrega un bloque Markdown copiable", "La idea principal aparece antes de los detalles", "Explica términos técnicos nuevos"]
+    },
+    {
+      "id": 17,
+      "prompt": "/skill:explainer --target markdown reescribe en inglés sencillo inspirado en ASD-STE100: «Antes de apagar el equipo, comprueba que la presión es 0 bar. Si no lo es, no abras la válvula»",
+      "expected_output": "Markdown en inglés que mantiene 0 bar, la condición y la prohibición del original; aplica el perfil predeterminado.",
+      "assertions": ["El contenido del bloque Markdown está en inglés", "Conserva literalmente 0 bar", "Prohíbe abrir la válvula cuando la presión no es 0 bar"]
+    }
+  ]
+}
