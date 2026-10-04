@@ -4,7 +4,7 @@ description: "Genera o reformula explicaciones en cualquier idioma. Aplica un pe
 license: MIT
 metadata:
   author: eLafo
-  version: "1.0.0" # x-release-please-version
+  version: "0.3.0" # x-release-please-version
 ---
 
 # Explainer
