@@ -1,64 +1,64 @@
 # Explainer
 
-`explainer` es una skill que genera o reescribe explicaciones en cualquier idioma. Puedes usarla para aclarar un texto, explicar un tema o adaptar el contenido a una audiencia.
+`explainer` is a skill that generates or rewrites explanations in any language. Use it to clarify text, explain a topic, or adapt content to an audience.
 
-La skill separa cuatro decisiones:
+The skill separates four decisions:
 
-- **Perfil:** define cómo se explica y se redacta el contenido.
-- **Framework narrativo:** define el orden de las ideas.
-- **Forma:** organiza el documento como artículo, preguntas frecuentes o procedimiento.
-- **Destino:** entrega el resultado en el chat, como Markdown copiable o como archivo HTML.
+- **Profile:** defines how the content is explained and written.
+- **Narrative framework:** defines the order of ideas.
+- **Form:** organizes the document as an article, FAQ, or procedure.
+- **Target:** delivers the result in chat, as copyable Markdown, or as an HTML file.
 
-## Instalar la skill
+## Install the skill
 
-Ejecuta:
+Run:
 
 ```bash
 npx skills add elafo/explainer-skill --skill explainer
 ```
 
-La instalación se aplica al proyecto actual. Añade `-g` si quieres instalar la skill de forma global.
+Installation applies to the current project. Add `-g` to install the skill globally.
 
-Revisa su contenido antes de instalarla. La instalación desde GitHub no fija de forma automática una versión publicada.
+Review its contents before installation. Installing from GitHub does not automatically pin a published version.
 
-## Elegir un perfil
+## Choose a profile
 
-Si no eliges un perfil, la skill usa `plain-language`.
+If you do not choose a profile, the skill uses `plain-language`.
 
-- `plain-language`: lenguaje claro multilingüe inspirado en los principios públicos de ISO 24495-1:2023.
-- `feynman`: explicación pedagógica inspirada en Feynman.
-- `asd-ste100`: pautas parciales para redactar inglés técnico claro.
+- `plain-language`: multilingual plain language inspired by the public principles of ISO 24495-1:2023.
+- `feynman`: a teaching-oriented explanation inspired by Feynman.
+- `asd-ste100`: partial guidelines for writing clear technical English.
 
-Estos perfiles orientan la redacción. **No acreditan conformidad con una norma oficial.** Puedes consultar las fuentes y los límites de cada atribución en [`skills/explainer/references/sources/`](skills/explainer/references/sources/).
+These profiles guide the writing. **They do not establish conformity with an official standard.** See the sources and limits for each attribution in [`skills/explainer/references/sources/`](skills/explainer/references/sources/).
 
-## Elegir el idioma y el destino
+## Choose the language and target
 
-Puedes indicar el idioma con `--language` o pedirlo en lenguaje natural.
+Specify the language with `--language` or request it in natural language.
 
-La skill puede entregar el resultado en:
+The skill can deliver the result as:
 
-- el chat;
-- un bloque Markdown copiable;
-- un archivo HTML.
+- a chat response;
+- a copyable Markdown block;
+- an HTML file.
 
-Cuando eliges Markdown, `--file` guarda también el contenido en un archivo. Cuando eliges HTML, `--file` indica la ruta del archivo que se debe crear.
+For Markdown, `--file` also saves the content to a file. For HTML, `--file` specifies the path of the file to create.
 
-## Archivos principales
+## Main files
 
-La skill instalable está en [`skills/explainer/`](skills/explainer/).
+The installable skill is in [`skills/explainer/`](skills/explainer/).
 
-- [`skills/explainer/SKILL.md`](skills/explainer/SKILL.md) contiene las instrucciones principales.
-- [`skills/explainer/references/`](skills/explainer/references/) contiene las reglas adicionales.
-- [`skills/explainer/references/sources/`](skills/explainer/references/sources/) registra las fuentes primarias verificadas y sus límites.
-- [`skills/explainer/evals/evals.json`](skills/explainer/evals/evals.json) contiene casos de evaluación, resultados y aserciones.
-- [`skills/explainer/evals/trigger-queries.json`](skills/explainer/evals/trigger-queries.json) contiene casos para evaluar la activación de la skill.
+- [`skills/explainer/SKILL.md`](skills/explainer/SKILL.md) contains the main instructions.
+- [`skills/explainer/references/`](skills/explainer/references/) contains additional rules.
+- [`skills/explainer/references/sources/`](skills/explainer/references/sources/) records verified primary sources and their limits.
+- [`skills/explainer/evals/evals.json`](skills/explainer/evals/evals.json) contains evaluation cases, expected results, and assertions.
+- [`skills/explainer/evals/trigger-queries.json`](skills/explainer/evals/trigger-queries.json) contains cases for evaluating skill activation.
 
-Los casos de evaluación son propuestas. La batería completa todavía no se ha ejecutado para medir la fiabilidad.
+The evaluation cases are proposals. The complete suite has not yet been run to measure reliability.
 
-## Versiones
+## Releases
 
-Este repositorio usa [release-please](https://github.com/googleapis/release-please-action) y commits convencionales para proponer nuevas versiones.
+This repository uses [release-please](https://github.com/googleapis/release-please-action) and Conventional Commits to propose new versions.
 
-Una nueva versión se publica cuando se fusiona una pull request de release. En ese momento se crean la etiqueta y la GitHub Release. Un push normal no publica una versión.
+A new version is published when a release pull request is merged. The tag and GitHub Release are created at that time. An ordinary push does not publish a version.
 
-La primera versión fue `v0.1.0`. Consulta las [versiones publicadas](https://github.com/eLafo/explainer-skill/releases) para conocer la versión actual.
+The first version was `v0.1.0`. See the [published releases](https://github.com/eLafo/explainer-skill/releases) for the current version.

@@ -1,18 +1,18 @@
 [
   {
-    "query": "Explícame qué es la memoria caché con una analogía sencilla para alguien que empieza a programar.",
+    "query": "Explain what a cache is with a simple analogy for someone who is starting to program.",
     "should_trigger": true
   },
   {
-    "query": "Reescribe esta instrucción en inglés técnico claro siguiendo las pautas de ASD-STE100: Si la presión no es 0 bar, no abra la válvula.",
+    "query": "Rewrite this instruction in clear technical English following ASD-STE100 guidelines: If the pressure is not 0 bar, do not open the valve.",
     "should_trigger": true
   },
   {
-    "query": "Pon esta carta en lenguaje claro sin perder sus plazos ni sus condiciones.",
+    "query": "Put this letter into plain language without losing its deadlines or conditions.",
     "should_trigger": true
   },
   {
-    "query": "Simplifica esta función Python sin cambiar su comportamiento: def doble(x): return x + x",
+    "query": "Simplify this Python function without changing its behavior: def double(x): return x + x",
     "should_trigger": false
   }
 ]

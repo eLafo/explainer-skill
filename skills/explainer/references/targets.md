@@ -1,23 +1,23 @@
-# Destinos de Explainer
+# Explainer targets
 
-Un destino determina cómo **se entrega** la explicación, no qué vocabulario usa ni qué recorrido narrativo sigue. Destinos disponibles: `chat`, `markdown`, `html`. El idioma del texto depende de `--language`. No hagas depender un destino de otra skill.
+A target determines how the explanation **is delivered**, not which vocabulary it uses or which narrative path it follows. Available targets: `chat`, `markdown`, and `html`. The text language depends on `--language`. Do not make a target depend on another skill.
 
-## `chat` (predeterminado)
+## `chat` (default)
 
-Responde directamente en la conversación. Puedes usar títulos o listas cortas si ayudan, pero no envuelvas toda la respuesta en un bloque de código. No crees archivos. `--file` no es válido con este destino.
+Respond directly in the conversation. Use headings or short lists when helpful, but do not wrap the entire response in a code block. Do not create files. `--file` is not valid with this target.
 
 ## `markdown`
 
-Entrega **todo el documento** en un único bloque de código Markdown copiable, con etiqueta `markdown` (o `md` si el cliente solo acepta esa etiqueta). No pongas prólogos, notas o líneas ajenas al documento dentro del bloque. Si el documento contiene fences, usa un delimitador exterior más largo para que pueda copiarse íntegro. El documento puede contener títulos, listas, tablas o citas si sirven al contenido; no impongas secciones vacías.
+Deliver **the entire document** in one copyable Markdown code block with the `markdown` language tag, or `md` if the client accepts only that tag. Do not put prefaces, notes, or lines external to the document inside the block. If the document contains fences, use a longer outer delimiter so the complete document can be copied. The document can contain headings, lists, tables, or quotations when useful; do not impose empty sections.
 
-Si se indica `--file <ruta>`, escribe además **exactamente el mismo documento** en un archivo `.md`. Muestra la ruta fuera del bloque y no sobrescribas un archivo existente sin permiso. Sin `--file`, no crees archivo: el snippet es la entrega.
+If `--file <path>` is specified, also write **exactly the same document** to a `.md` file. Show the path outside the block, and do not overwrite an existing file without permission. Without `--file`, do not create a file; the snippet is the delivery.
 
 ## `html`
 
-Entrega un **archivo HTML completo**, no solo un fragmento o una descripción. Incluye `<!doctype html>`, `<html lang="…">`, `<meta charset>`, viewport, `<title>` y HTML semántico. Integra el CSS necesario en el archivo; no dependas de redes externas para mostrar la página. Mantén el texto seleccionable, la jerarquía de títulos clara, el contraste suficiente y una presentación que se adapte a pantallas pequeñas. El perfil se aplica a todo el texto visible, incluidas etiquetas y pies.
+Deliver a **complete HTML file**, not only a fragment or description. Include `<!doctype html>`, `<html lang="…">`, `<meta charset>`, a viewport declaration, `<title>`, and semantic HTML. Embed the necessary CSS in the file; do not depend on external networks to display the page. Keep text selectable, maintain a clear heading hierarchy and sufficient contrast, and make the presentation adapt to small screens. Apply the profile to all visible text, including labels and footers.
 
-Usa `--file <ruta>` si se indica; exige extensión `.html`. Si no hay ruta, crea un nombre descriptivo y **nuevo** bajo `./explainer-output/` del directorio de trabajo; añade un sufijo si ya existe. No sobrescribas sin permiso. Comprueba que el archivo existe, es un documento completo y se puede abrir; entrega la ruta.
+Use `--file <path>` when provided and require a `.html` extension. If no path is provided, create a descriptive, **new** filename under `./explainer-output/` in the working directory; add a suffix if it already exists. Do not overwrite without permission. Verify that the file exists, is a complete document, and can be opened; deliver its path.
 
-## Ampliación
+## Extension
 
-Para añadir otro destino, documenta sus requisitos, modo de entrega y verificación aquí antes de anunciarlo en `SKILL.md`. No cambies el significado de `--profile` o `--framework` para codificar una extensión de archivo o un medio audiovisual.
+Before advertising another target in `SKILL.md`, document its requirements, delivery method, and verification here. Do not change the meaning of `--profile` or `--framework` to encode a file extension or audiovisual medium.

@@ -1,11 +1,11 @@
-# Frameworks narrativos
+# Narrative frameworks
 
-Un framework define el **orden de las ideas** para facilitar la comprensión. No define vocabulario (`--profile`), tipo de documento (`--form`) ni medio (`--target`). Son adaptaciones operativas para Explainer, no reproducciones certificadas de métodos de terceros. Consulta `references/sources/README.md` antes de atribuir un método a una persona o institución.
+A framework defines the **order of ideas** to aid understanding. It does not define vocabulary (`--profile`), document type (`--form`), or medium (`--target`). These are operational adaptations for Explainer, not certified reproductions of third-party methods. Consult `references/sources/README.md` before attributing a method to a person or institution.
 
-- `auto` (predeterminado): no fuerza una secuencia; organiza según el contenido y, al reformular, respeta el orden necesario de la fuente.
-- `why-how-what`: relevancia → funcionamiento → resultado o definición. Referencia: `references/frameworks/why-how-what.md`.
-- `scqa`: situación → complicación → pregunta → respuesta. Referencia: `references/frameworks/scqa.md`.
-- `what-so-what-now-what`: hechos → significado → siguiente paso, solo si está justificado. Referencia: `references/frameworks/what-so-what-now-what.md`.
-- `pyramid`: respuesta principal → razones → evidencia. Referencia: `references/frameworks/pyramid.md`.
+- `auto` (default): does not force a sequence; organizes according to the content and preserves the source’s required order when rewriting.
+- `why-how-what`: relevance → operation → result or definition. Reference: `references/frameworks/why-how-what.md`.
+- `scqa`: situation → complication → question → answer. Reference: `references/frameworks/scqa.md`.
+- `what-so-what-now-what`: facts → meaning → next step, only when justified. Reference: `references/frameworks/what-so-what-now-what.md`.
+- `pyramid`: main answer → reasons → evidence. Reference: `references/frameworks/pyramid.md`.
 
-Para añadir uno: crea `references/frameworks/<id>.md` con propósito, secuencia, límites y comprobación; regístralo aquí. Si una fase requiere datos que la fuente no contiene, no los inventes. En procedimientos, conserva el orden de las acciones y los avisos de seguridad. No añadas frameworks de persuasión sin verificar primero su fuente y sin reglas que impidan fabricar promesas o pruebas.
+To add one, create `references/frameworks/<id>.md` with its purpose, sequence, limits, and checks, then register it here. If a stage requires information absent from the source, do not invent it. Preserve the order of actions and safety warnings in procedures. Do not add persuasive frameworks without first verifying their source and adding rules that prevent fabricated promises or evidence.

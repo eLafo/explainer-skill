@@ -1,6 +1,6 @@
 ---
 name: explainer
-description: "Genera o reformula explicaciones en cualquier idioma. Aplica un perfil de explicación (ASD-STE100, Feynman o lenguaje claro inspirado en ISO 24495-1) y un framework narrativo independientes; entrega en chat, Markdown copiable o HTML. Usa cuando se pida explicar, simplificar o presentar contenido en uno de estos destinos."
+description: "Generate or rewrite explanations in any language. Apply an independent explanation profile (ASD-STE100, Feynman, or plain language inspired by ISO 24495-1) and narrative framework; deliver in chat, copyable Markdown, or HTML. Use when asked to explain, simplify, or present content in one of these targets."
 license: MIT
 metadata:
   author: eLafo
@@ -9,45 +9,45 @@ metadata:
 
 # Explainer
 
-Organiza una explicación sin confundir cuatro decisiones: **qué se sabe** (fuente o tema), **cómo se explica y redacta** (perfil), **en qué orden se entiende** (framework narrativo) y **cómo se entrega** (destino). La forma del documento (artículo, FAQ, procedimiento) es opcional y distinta del framework. El perfil se aplica al texto, sin alterar los hechos. Admite cualquier idioma.
+Organize an explanation without confusing four decisions: **what is known** (source or topic), **how it is explained and written** (profile), **the order in which it is understood** (narrative framework), and **how it is delivered** (target). The document form (article, FAQ, or procedure) is optional and separate from the framework. Apply the profile to the text without changing the facts. The skill supports any language.
 
-## Interfaz
+## Interface
 
-`/skill:explainer [--profile <id>] [--framework <id>] [--form auto|article|faq|procedure] [--target chat|markdown|html] [--language <idioma>] [--audience <audiencia>] [--file <ruta>] [--strict] [--keep-structure] <petición o contenido>`
+`/skill:explainer [--profile <id>] [--framework <id>] [--form auto|article|faq|procedure] [--target chat|markdown|html] [--language <language>] [--audience <audience>] [--file <path>] [--strict] [--keep-structure] <request or content>`
 
-Los argumentos son convenciones que interpreta el agente, **no** flags de un parser ejecutable. También se aceptan peticiones equivalentes en lenguaje natural.
+The arguments are conventions interpreted by the agent, **not** flags handled by an executable parser. Equivalent natural-language requests are also accepted.
 
-- `--profile <id>`: reglas lingüísticas o pedagógicas; por defecto `plain-language` **si no se pide otro perfil**. «Lenguaje claro», «lenguaje simple» o «plain language» seleccionan `plain-language`; «como Feynman» selecciona `feynman`; «siguiendo ASD-STE100» o una instrucción equivalente selecciona `asd-ste100`. Mencionar ASD-STE100 como **tema** no basta para elegir ese perfil. «Lectura fácil» validada es una petición distinta: no la equipares automáticamente a lenguaje claro. Consulta `references/profiles/README.md` y **lee siempre** `references/profiles/<id>.md` antes de redactar, también para respuestas cortas.
-- `--framework <id>`: recorrido narrativo; por defecto `auto` (no fuerza un relato). Consulta `references/frameworks/README.md` y lee la referencia completa del framework elegido.
-- `--form`: forma del documento; `auto` (predeterminado) deja que el contenido determine el formato de organización, `article` usa secciones, `faq` usa preguntas y respuestas, `procedure` organiza **solo acciones presentes en la fuente** en pasos ordenados. La forma no aporta hechos nuevos.
-- `--target`: `chat` (predeterminado), `markdown` (bloque copiable, con archivo opcional) o `html` (archivo completo). Lee `references/targets.md` para la entrega y su verificación.
-- `--language`: idioma de salida explícito. Prioridad: flag `--language` → petición en lenguaje natural («en inglés», «escríbelo en francés») → idioma de la petición. **No** uses por defecto el idioma del texto fuente si el usuario pide otro. Traduce cuando sea necesario y conserva cifras, condiciones y advertencias. Pregunta solo si la petición multilingüe no expresa preferencia clara.
-- `--audience`: adapta términos y detalle al público sin inventar datos.
-- `--file <ruta>`: para `markdown`, guarda además el mismo contenido en un `.md`; para `html`, indica la ruta del archivo. No se aplica a `chat`. No sobrescribas un archivo existente sin permiso.
-- `--strict`: revisa con más rigor las reglas disponibles; nunca equivale a una certificación o verificación oficial.
-- `--keep-structure`: al reformular, conserva títulos, listas, tablas y orden cuando sea posible. Si contradice un framework o una forma explícitos, pide elegir cuál tiene prioridad.
+- `--profile <id>`: linguistic or teaching rules; defaults to `plain-language` **unless another profile is requested**. “Plain language,” “clear language,” or “simple language” select `plain-language`; “like Feynman” selects `feynman`; “following ASD-STE100” or an equivalent instruction selects `asd-ste100`. Mentioning ASD-STE100 as the **topic** is not enough to select that profile. Validated “easy read” is a different request; do not automatically equate it with plain language. Consult `references/profiles/README.md` and **always read** `references/profiles/<id>.md` before writing, including for short answers.
+- `--framework <id>`: narrative path; defaults to `auto`, which does not force a narrative. Consult `references/frameworks/README.md` and read the complete reference for the selected framework.
+- `--form`: document form. `auto` (default) lets the content determine its organization; `article` uses sections; `faq` uses questions and answers; `procedure` organizes **only actions present in the source** as ordered steps. Form does not add new facts.
+- `--target`: `chat` (default), `markdown` (a copyable block with an optional file), or `html` (a complete file). Read `references/targets.md` for delivery and verification requirements.
+- `--language`: explicit output language. Priority: `--language` flag → natural-language request (“in English,” “write it in French”) → language of the request. **Do not** default to the source text’s language when the user requests another one. Translate when necessary and preserve figures, conditions, and warnings. Ask only when a multilingual request gives no clear preference.
+- `--audience`: adapt terms and detail to the audience without inventing information.
+- `--file <path>`: for `markdown`, also save the same content in a `.md` file; for `html`, specify the output path. It does not apply to `chat`. Do not overwrite an existing file without permission.
+- `--strict`: review the available rules more rigorously; it never means certification or official verification.
+- `--keep-structure`: when rewriting, preserve headings, lists, tables, and order where possible. If it conflicts with an explicit framework or form, ask which takes priority.
 
-**Compatibilidad:** `--format asd-ste100` equivale a `--profile asd-ste100`; `--structure article|faq|procedure|auto` equivale a `--form` con el mismo valor. Para elegir el recorrido usa `--framework`, y para HTML o Markdown usa `--target`. Si `--format` o `--structure` recibe otro valor, explica el cambio y pide aclaración. Si falta un valor requerido o el ID no está registrado, ofrece las opciones válidas y pregunta; no inventes perfiles ni frameworks.
+**Compatibility:** `--format asd-ste100` is equivalent to `--profile asd-ste100`; `--structure article|faq|procedure|auto` is equivalent to `--form` with the same value. Use `--framework` to select the narrative path and `--target` for HTML or Markdown. If `--format` or `--structure` receives another value, explain the change and ask for clarification. If a required value is missing or an ID is not registered, offer the valid options and ask; do not invent profiles or frameworks.
 
-## Ejemplos
+## Examples
 
-- `--profile asd-ste100 --framework why-how-what --target chat --language es explica ASD-STE100` → respuesta en el chat con redacción clara en español.
-- `--profile feynman --target chat explica este concepto a principiantes` → explicación pedagógica sin perder precisión.
-- `--target chat --language es aclara esta carta para sus destinatarios` → lenguaje claro por defecto, sin omitir condiciones.
-- `--framework pyramid --target markdown --file ./resumen.md explica este informe` → bloque Markdown copiable y el mismo contenido en un archivo.
-- `--framework scqa --target html explica este problema` → archivo HTML autónomo, siempre que el problema esté documentado.
+- `--profile asd-ste100 --framework why-how-what --target chat --language es explain ASD-STE100` → a clearly written response in Spanish, delivered in chat.
+- `--profile feynman --target chat explain this concept to beginners` → a teaching-oriented explanation that remains accurate.
+- `--target chat --language es clarify this letter for its recipients` → plain language by default, without omitting conditions.
+- `--framework pyramid --target markdown --file ./summary.md explain this report` → a copyable Markdown block and identical content in a file.
+- `--framework scqa --target html explain this problem` → a self-contained HTML file, provided that the problem is documented.
 
-## Flujo
+## Workflow
 
-1. Determina si el usuario pide generar un documento sobre un tema o reformular texto. Si dice «lo anterior», usa la respuesta relevante más reciente. Resuelve **primero el idioma de salida**, incluido lo pedido en lenguaje natural, y después audiencia, perfil, framework, forma y destino. Si falta información imprescindible, pregunta o delimita el alcance; no inventes especificaciones.
-2. Antes de escribir, lee íntegramente la referencia del perfil elegido **aunque no se haya indicado `--profile`**. Si se elige un framework distinto de `auto`, lee su referencia. Para `markdown` o `html`, lee `references/targets.md`. Si vas a afirmar datos de un estándar o atribuir un método, consulta la ficha pertinente en `references/sources/README.md` y sus fuentes primarias; no inventes una fuente oficial cuando no existe ficha verificada. Para `asd-ste100`, distingue inglés técnico de adaptación a otro idioma: no cambies el idioma solicitado para ajustarlo al estándar.
-3. Extrae las afirmaciones, cifras, condiciones, advertencias e incertidumbres de la fuente. Aplica el framework **solo a contenido sustentado**. No inventes porqués, problemas, pruebas, causas, recomendaciones ni pasos para rellenar casillas. Si falta una pieza necesaria, omítela con honestidad o pregunta cuando impida responder.
-4. Aplica la forma y el destino. Mantén el orden obligatorio de acciones y avisos de seguridad: ni un framework narrativo ni una forma editorial deben reordenar un procedimiento peligroso. Si la combinación solicitada es incompatible, explica el conflicto y pide elegir.
-5. Comprueba que **el texto final está en el idioma solicitado** (no en el idioma original si difieren). Si hubo traducción, coteja cifras, condiciones, negaciones y advertencias con la fuente. Revisa fidelidad, claridad, límites del perfil, forma y entrega real. Entrega el texto o una ruta al archivo; anota únicamente las limitaciones relevantes (por ejemplo, no atribuyas conformidad oficial a una adaptación).
+1. Determine whether the user wants a new document about a topic or a rewrite of existing text. If the user says “the previous one,” use the most recent relevant response. Resolve **the output language first**, including natural-language requests, then the audience, profile, framework, form, and target. If essential information is missing, ask or limit the scope; do not invent specifications.
+2. Before writing, read the selected profile reference in full **even when `--profile` was not specified**. If a framework other than `auto` is selected, read its reference. For `markdown` or `html`, read `references/targets.md`. Before stating facts about a standard or attributing a method, consult the relevant entry in `references/sources/README.md` and its primary sources; do not invent an official source when no verified entry exists. For `asd-ste100`, distinguish technical English from an adaptation to another language: do not change the requested language to fit the standard.
+3. Extract claims, figures, conditions, warnings, and uncertainties from the source. Apply the framework **only to supported content**. Do not invent reasons, problems, evidence, causes, recommendations, or steps to fill template slots. If a necessary element is missing, omit it honestly or ask when its absence prevents an answer.
+4. Apply the form and target. Preserve the required order of actions and safety warnings: neither a narrative framework nor an editorial form may reorder a hazardous procedure. If the requested combination is incompatible, explain the conflict and ask the user to choose.
+5. Verify that **the final text is in the requested language**, not the source language when they differ. After translation, compare figures, conditions, negations, and warnings with the source. Review fidelity, clarity, profile limits, form, and actual delivery. Deliver the text or a file path; mention only relevant limitations, such as not attributing official conformity to an adaptation.
 
-## Límites
+## Limits
 
-- Ningún perfil acredita conformidad oficial sin verificar todas las reglas y vocabulario del estándar correspondiente.
-- Conserva ambigüedades de la fuente o pide aclaración cuando sea imprescindible; no adivines.
-- Conserva nombres propios, identificadores, código, comandos, unidades y citas exactas cuando cambiarlos altere el significado.
-- Prioriza la exactitud sobre la simplicidad o la fuerza narrativa.
+- No profile establishes official conformity unless all rules and vocabulary of the applicable standard have been verified.
+- Preserve ambiguities in the source or ask for clarification when necessary; do not guess.
+- Preserve proper names, identifiers, code, commands, units, and exact quotations when changing them would alter the meaning.
+- Prioritize accuracy over simplicity or narrative force.

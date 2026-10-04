@@ -1,10 +1,10 @@
-# `scqa` — situación, complicación, pregunta, respuesta
+# `scqa` — situation, complication, question, answer
 
-Úsalo cuando la fuente describa un problema real o una tensión concreta. No crees un conflicto artificial para hacer el texto más atractivo.
+Use this framework when the source describes a real problem or specific tension. Do not create an artificial conflict to make the text more engaging.
 
-1. **Situación:** hechos de partida que el lector necesita.
-2. **Complicación:** cambio, problema o límite acreditado en la fuente. Si no existe, no lo inventes: usa `auto` u otro framework.
-3. **Pregunta:** formula la duda que resulta de esa complicación sin atribuirla falsamente al usuario.
-4. **Respuesta:** da la explicación respaldada por la fuente. Declara lo que no se sabe si la fuente no permite resolver la pregunta.
+1. **Situation:** starting facts that the reader needs.
+2. **Complication:** a change, problem, or limitation supported by the source. If none exists, do not invent one; use `auto` or another framework.
+3. **Question:** express the question that follows from the complication without falsely attributing it to the user.
+4. **Answer:** give the explanation supported by the source. State what is unknown if the source cannot resolve the question.
 
-Comprobación: ¿la complicación tiene apoyo explícito? ¿La pregunta corresponde al problema? ¿La respuesta distingue hechos de hipótesis y conserva excepciones?
+Check: Does explicit evidence support the complication? Does the question correspond to the problem? Does the answer distinguish facts from hypotheses and preserve exceptions?

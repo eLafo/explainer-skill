@@ -3,129 +3,129 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "/skill:explainer --target chat explica ASD-STE100",
-      "expected_output": "Respuesta en español y lenguaje claro por defecto, directamente en el chat, sin archivo ni afirmación de conformidad oficial. ASD-STE100 es el tema, no el perfil solicitado.",
-      "assertions": ["Responde en español", "No crea archivos", "No afirma certificación ni conformidad oficial", "No presupone que mencionar ASD-STE100 elige ese perfil"]
+      "prompt": "/skill:explainer --target chat explain ASD-STE100",
+      "expected_output": "An English response using plain language by default, delivered directly in chat, with no file or claim of official conformity. ASD-STE100 is the topic, not the requested profile.",
+      "assertions": ["Responds in English", "Creates no files", "Does not claim certification or official conformity", "Does not assume that mentioning ASD-STE100 selects that profile"]
     },
     {
       "id": 2,
-      "prompt": "/skill:explainer --framework why-how-what --target markdown explica ASD-STE100",
-      "expected_output": "Un bloque Markdown copiable cuya relevancia inicial no atribuye intenciones inventadas.",
-      "assertions": ["Entrega un único bloque de código etiquetado markdown", "El contenido distingue hechos de motivaciones no demostradas"]
+      "prompt": "/skill:explainer --framework why-how-what --target markdown explain ASD-STE100",
+      "expected_output": "A copyable Markdown block whose opening relevance does not attribute invented intentions.",
+      "assertions": ["Delivers one code block tagged markdown", "Distinguishes facts from unsupported motivations"]
     },
     {
       "id": 3,
-      "prompt": "/skill:explainer --framework pyramid --target markdown --file ./out/resumen.md explica ASD-STE100",
-      "expected_output": "Bloque Markdown y archivo out/resumen.md con contenido idéntico; conclusión sustentada primero.",
-      "assertions": ["El archivo out/resumen.md existe", "El contenido del bloque coincide exactamente con el archivo", "La respuesta principal aparece antes de las razones"]
+      "prompt": "/skill:explainer --framework pyramid --target markdown --file ./out/summary.md explain ASD-STE100",
+      "expected_output": "A Markdown block and out/summary.md file with identical content and a supported conclusion first.",
+      "assertions": ["The out/summary.md file exists", "The block content exactly matches the file", "The main answer appears before the reasons"]
     },
     {
       "id": 4,
-      "prompt": "/skill:explainer --framework scqa --target chat explica este dato: El equipo se llama A",
-      "expected_output": "No inventa una complicación; explica el límite o cambia explícitamente a organización auto.",
-      "assertions": ["No inventa un problema o conflicto", "Señala que falta la complicación o usa una organización sin SCQA"]
+      "prompt": "/skill:explainer --framework scqa --target chat explain this fact: The team is called A",
+      "expected_output": "Does not invent a complication; explains the limitation or explicitly switches to auto organization.",
+      "assertions": ["Does not invent a problem or conflict", "States that the complication is missing or uses a non-SCQA organization"]
     },
     {
       "id": 5,
-      "prompt": "/skill:explainer --framework what-so-what-now-what --target chat interpreta estos datos: 10, 12",
-      "expected_output": "Distingue los valores observados de causas y recomendaciones no sustentadas.",
-      "assertions": ["Conserva los valores 10 y 12", "No atribuye una causa desconocida", "No presenta una recomendación como obligatoria"]
+      "prompt": "/skill:explainer --framework what-so-what-now-what --target chat interpret these data: 10, 12",
+      "expected_output": "Distinguishes observed values from unsupported causes and recommendations.",
+      "assertions": ["Preserves the values 10 and 12", "Does not attribute an unknown cause", "Does not present a recommendation as mandatory"]
     },
     {
       "id": 6,
-      "prompt": "/skill:explainer --target html explica ASD-STE100",
-      "expected_output": "Entrega un archivo HTML completo, autónomo y con ruta comunicada al usuario.",
-      "assertions": ["El archivo existe", "Contiene doctype, html lang, title y viewport", "Incluye un límite explícito sobre la conformidad oficial"]
+      "prompt": "/skill:explainer --target html explain ASD-STE100",
+      "expected_output": "Delivers a complete, self-contained HTML file and tells the user its path.",
+      "assertions": ["The file exists", "Contains doctype, html lang, title, and viewport", "Includes an explicit limitation about official conformity"]
     },
     {
       "id": 7,
       "prompt": "/skill:explainer --target html --file ./out/explainer-en.html --language en explain ASD-STE100",
-      "expected_output": "Entrega out/explainer-en.html en inglés sin atribuirle certificación oficial.",
-      "assertions": ["El archivo out/explainer-en.html existe", "El html declara lang=en y el texto explicativo está en inglés", "No afirma certificación oficial"]
+      "expected_output": "Delivers out/explainer-en.html in English without attributing official certification.",
+      "assertions": ["The out/explainer-en.html file exists", "The HTML declares lang=en and its explanatory text is in English", "Does not claim official certification"]
     },
     {
       "id": 8,
-      "prompt": "/skill:explainer --target video explica ASD-STE100",
-      "expected_output": "Indica que video no es un destino permitido y ofrece chat, markdown y html.",
-      "assertions": ["No afirma haber creado un vídeo", "Menciona los tres destinos disponibles"]
+      "prompt": "/skill:explainer --target video explain ASD-STE100",
+      "expected_output": "States that video is not an allowed target and offers chat, markdown, and html.",
+      "assertions": ["Does not claim to have created a video", "Mentions all three available targets"]
     },
     {
       "id": 9,
-      "prompt": "/skill:explainer --format asd-ste100 --structure faq --target markdown explica ASD-STE100",
-      "expected_output": "Interpreta los alias como perfil y forma; entrega un bloque Markdown con preguntas y respuestas.",
-      "assertions": ["La salida incluye preguntas y respuestas", "La entrega es un bloque Markdown copiable"]
+      "prompt": "/skill:explainer --format asd-ste100 --structure faq --target markdown explain ASD-STE100",
+      "expected_output": "Interprets the aliases as profile and form, then delivers a Markdown block with questions and answers.",
+      "assertions": ["The output includes questions and answers", "Delivery is a copyable Markdown block"]
     },
     {
       "id": 10,
-      "prompt": "/skill:explainer --format html explica ASD-STE100",
-      "expected_output": "Aclara que HTML es un destino y sugiere --target html, sin inventar un perfil html.",
-      "assertions": ["Sugiere --target html", "No trata html como perfil válido"]
+      "prompt": "/skill:explainer --format html explain ASD-STE100",
+      "expected_output": "Clarifies that HTML is a target and suggests --target html without inventing an html profile.",
+      "assertions": ["Suggests --target html", "Does not treat html as a valid profile"]
     },
     {
       "id": 11,
-      "prompt": "/skill:explainer --framework desconocido explica ASD-STE100",
-      "expected_output": "Ofrece los frameworks registrados y pide elegir, sin inventar reglas para desconocido.",
-      "assertions": ["Indica que desconocido no existe", "Incluye las alternativas disponibles"]
+      "prompt": "/skill:explainer --framework unknown explain ASD-STE100",
+      "expected_output": "Offers the registered frameworks and asks the user to choose without inventing rules for unknown.",
+      "assertions": ["States that unknown does not exist", "Includes the available alternatives"]
     },
     {
       "id": 12,
-      "prompt": "/skill:explainer --form procedure explica qué es ASD-STE100",
-      "expected_output": "No presenta una definición como si fueran pasos de un procedimiento; solicita otra forma.",
-      "assertions": ["No inventa pasos operativos", "Señala el conflicto entre procedimiento y explicación conceptual"]
+      "prompt": "/skill:explainer --form procedure explain what ASD-STE100 is",
+      "expected_output": "Does not present a definition as procedure steps and requests another form.",
+      "assertions": ["Does not invent operational steps", "Identifies the conflict between a procedure and a conceptual explanation"]
     },
     {
       "id": 13,
-      "prompt": "/skill:explainer --framework pyramid --keep-structure reescribe esta lista en el mismo orden: A, B",
-      "expected_output": "Conserva el orden solicitado o aclara la prioridad si las dos opciones no son compatibles.",
-      "assertions": ["A precede a B si transforma el texto", "No altera la información de la lista"]
+      "prompt": "/skill:explainer --framework pyramid --keep-structure rewrite this list in the same order: A, B",
+      "expected_output": "Preserves the requested order or clarifies priority if the two options are incompatible.",
+      "assertions": ["A precedes B if the text is transformed", "Does not alter the list information"]
     },
     {
       "id": 14,
-      "prompt": "/skill:explainer --target chat --file ./out/no-debe-crearse.md explica ASD-STE100",
-      "expected_output": "Comunica el conflicto entre chat y archivo; no crea out/no-debe-crearse.md.",
-      "assertions": ["El archivo out/no-debe-crearse.md no existe", "Explica que --file no es válido con chat"]
+      "prompt": "/skill:explainer --target chat --file ./out/do-not-create.md explain ASD-STE100",
+      "expected_output": "Communicates the conflict between chat and file and does not create out/do-not-create.md.",
+      "assertions": ["The out/do-not-create.md file does not exist", "Explains that --file is not valid with chat"]
     },
     {
       "id": 15,
-      "prompt": "/skill:explainer --profile feynman --target chat explica qué es una variable a una persona que empieza a programar",
-      "expected_output": "Explicación pedagógica sencilla y correcta; si usa analogía, la distingue de la definición literal.",
-      "assertions": ["Define variable sin jerga innecesaria", "No presenta una analogía como mecanismo literal"]
+      "prompt": "/skill:explainer --profile feynman --target chat explain what a variable is to someone starting to program",
+      "expected_output": "A simple, accurate teaching explanation that distinguishes any analogy from the literal definition.",
+      "assertions": ["Defines a variable without unnecessary jargon", "Does not present an analogy as a literal mechanism"]
     },
     {
       "id": 16,
-      "prompt": "/skill:explainer --profile feynman --framework pyramid --target markdown explica la memoria caché a principiantes",
-      "expected_output": "Bloque Markdown que comienza con la idea principal y la desarrolla para principiantes sin inventar datos.",
-      "assertions": ["Entrega un bloque Markdown copiable", "La idea principal aparece antes de los detalles", "Explica términos técnicos nuevos"]
+      "prompt": "/skill:explainer --profile feynman --framework pyramid --target markdown explain caching to beginners",
+      "expected_output": "A Markdown block that starts with the main idea and develops it for beginners without inventing facts.",
+      "assertions": ["Delivers a copyable Markdown block", "The main idea appears before details", "Explains new technical terms"]
     },
     {
       "id": 17,
-      "prompt": "/skill:explainer --target markdown reescribe en inglés sencillo inspirado en ASD-STE100: «Antes de apagar el equipo, comprueba que la presión es 0 bar. Si no lo es, no abras la válvula»",
-      "expected_output": "Markdown en inglés que mantiene 0 bar, la condición y la prohibición del original; aplica el perfil ASD-STE100 solicitado en lenguaje natural, no el predeterminado.",
-      "assertions": ["El contenido del bloque Markdown está en inglés", "Conserva literalmente 0 bar", "Prohíbe abrir la válvula cuando la presión no es 0 bar"]
+      "prompt": "/skill:explainer --target markdown rewrite in simple English inspired by ASD-STE100: Before you shut down the equipment, make sure the pressure is 0 bar. If it is not, do not open the valve.",
+      "expected_output": "English Markdown that preserves 0 bar, the condition, and the prohibition from the source; applies the ASD-STE100 profile requested in natural language rather than the default.",
+      "assertions": ["The Markdown block content is in English", "Preserves 0 bar exactly", "Prohibits opening the valve when pressure is not 0 bar"]
     },
     {
       "id": 18,
-      "prompt": "/skill:explainer --profile plain-language --target chat --language es reescribe para el destinatario sin perder condiciones: Si desea recurrir, debe presentar alegaciones en un plazo de 10 días hábiles. Si supera ese plazo, no se estudiarán.",
-      "expected_output": "Explicación en español que permite entender qué hacer y qué ocurre después del plazo, sin afirmar conformidad oficial.",
-      "assertions": ["Conserva 10 días hábiles", "Conserva la condición y la consecuencia de superar el plazo", "No inventa otro plazo ni un trámite nuevo"]
+      "prompt": "/skill:explainer --profile plain-language --target chat --language es rewrite for the recipient without losing conditions: To appeal, you must submit your arguments within 10 working days. Arguments submitted after that deadline will not be considered.",
+      "expected_output": "A Spanish explanation that lets the recipient understand what to do and what happens after the deadline, without claiming official conformity.",
+      "assertions": ["Preserves 10 working days in an accurate Spanish translation", "Preserves the condition and consequence of missing the deadline", "Does not invent another deadline or a new process"]
     },
     {
       "id": 19,
-      "prompt": "/skill:explainer --profile plain-language --framework pyramid --target markdown resume con claridad sin omitir límites: El equipo funciona entre 0 y 40 °C. Si la temperatura supera 40 °C, apáguelo. No lo reinicie hasta que baje a 40 °C o menos.",
-      "expected_output": "Un bloque Markdown copiable, con la indicación principal al inicio y todas las condiciones y unidades preservadas.",
-      "assertions": ["Entrega un único bloque Markdown", "Conserva 0 y 40 °C", "Mantiene la obligación de apagar y la condición para reiniciar", "No afirma conformidad ISO"]
+      "prompt": "/skill:explainer --profile plain-language --framework pyramid --target markdown summarize clearly without omitting limits: The equipment operates between 0 and 40 °C. If the temperature exceeds 40 °C, turn it off. Do not restart it until the temperature is 40 °C or lower.",
+      "expected_output": "A copyable Markdown block with the main instruction first and all conditions and units preserved.",
+      "assertions": ["Delivers one Markdown block", "Preserves 0 and 40 °C", "Preserves the requirement to turn off and the condition for restarting", "Does not claim ISO conformity"]
     },
     {
       "id": 20,
-      "prompt": "/skill:explainer --target chat explica a la persona destinataria este aviso: Puede solicitar una revisión en un plazo de 10 días hábiles. Pasado ese plazo, no se aceptarán solicitudes.",
-      "expected_output": "Respuesta en español con lenguaje claro por defecto: identifica qué puede hacer la persona, el plazo y la consecuencia sin inventar trámites.",
-      "assertions": ["Conserva 10 días hábiles", "Explica la opción de solicitar una revisión y la consecuencia de superar el plazo", "No inventa trámites ni condiciones"]
+      "prompt": "/skill:explainer --target chat explain this notice to its recipient: You may request a review within 10 working days. Requests after that deadline will not be accepted.",
+      "expected_output": "An English response using plain language by default that identifies the recipient’s option, deadline, and consequence without inventing procedures.",
+      "assertions": ["Preserves 10 working days", "Explains the option to request a review and the consequence of missing the deadline", "Does not invent procedures or conditions"]
     },
     {
       "id": 21,
       "prompt": "/skill:explainer --target chat --language en explain this notice: You may request a review within 10 working days. Requests after that deadline will not be accepted.",
-      "expected_output": "Respuesta en inglés con lenguaje claro por defecto que mantiene la opción, el plazo y la consecuencia.",
-      "assertions": ["Responde en inglés", "Conserva 10 working days", "No convierte la opción en una obligación", "Mantiene la consecuencia del retraso"]
+      "expected_output": "An English response using plain language by default that preserves the option, deadline, and consequence.",
+      "assertions": ["Responds in English", "Preserves 10 working days", "Does not turn the option into an obligation", "Preserves the consequence of delay"]
     }
   ]
 }

@@ -1,9 +1,9 @@
-# `pyramid` — respuesta primero, apoyo después
+# `pyramid` — answer first, support afterward
 
-Usa un orden descendente de información cuando el lector necesite entender pronto la respuesta principal. Es una adaptación práctica de la organización piramidal, no una garantía de aplicar íntegramente el método original.
+Use a descending order of information when the reader needs to understand the main answer quickly. This is a practical adaptation of pyramid organization, not a guarantee that the original method is applied in full.
 
-1. **Respuesta principal:** afirma lo que se puede sostener con la fuente. Si no hay conclusión firme, declara la incertidumbre desde el principio.
-2. **Razones:** agrupa las razones independientes que apoyan la respuesta. Evita repetir la conclusión como si fuera una prueba.
-3. **Evidencia y límites:** presenta hechos, datos, condiciones y contraejemplos relevantes. Cuando corresponda, indica de dónde proceden.
+1. **Main answer:** state what the source supports. If there is no firm conclusion, state the uncertainty at the start.
+2. **Reasons:** group the independent reasons that support the answer. Do not repeat the conclusion as though it were evidence.
+3. **Evidence and limits:** present relevant facts, data, conditions, and counterexamples. When appropriate, identify their source.
 
-Comprobación: ¿la respuesta se apoya en las razones? ¿Las razones tienen evidencia? ¿Las limitaciones permanecen visibles y los avisos de seguridad no se retrasan por seguir este orden?
+Check: Does the answer follow from the reasons? Do the reasons have evidence? Do limitations remain visible, and are safety warnings presented without delay despite this order?

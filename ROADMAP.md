@@ -1,32 +1,32 @@
-# Roadmap de Explainer
+# Explainer roadmap
 
-Este documento reúne propuestas pendientes y decisiones ya aplicadas. Las propuestas no son funcionalidades disponibles. La interfaz actual y los identificadores admitidos están en [`skills/explainer/SKILL.md`](skills/explainer/SKILL.md). Mantener separados perfil (cómo explicar), framework (orden de las ideas), forma del documento y target (entrega).
+This document collects pending proposals and decisions that have already been applied. Proposals are not available features. The current interface and supported identifiers are in [`skills/explainer/SKILL.md`](skills/explainer/SKILL.md). Keep profile (how to explain), framework (order of ideas), document form, and target (delivery) separate.
 
-## Próxima iteración: precisión al interpretar salidas de LLM
+## Next iteration: precision when interpreting LLM output
 
-- [ ] **Profile `precision-first`** — explicar con claridad sin borrar condiciones, incertidumbre, excepciones ni distinciones técnicas. No convertir una hipótesis en un hecho ni resumir por defecto.
-- [ ] **Framework `claim-evidence-limits`** — afirmación → evidencia disponible → límites y datos desconocidos. Si faltan pruebas, decirlo; no crear pruebas para completar la secuencia.
-- [ ] Añadir evals con entradas ambiguas, datos incompletos y afirmaciones sin fuente. Comparar fidelidad y utilidad con los perfiles y frameworks existentes antes de adoptar ambos.
+- [ ] **Profile `precision-first`** — explain clearly without removing conditions, uncertainty, exceptions, or technical distinctions. Do not turn a hypothesis into a fact or summarize by default.
+- [ ] **Framework `claim-evidence-limits`** — claim → available evidence → limits and unknown data. If evidence is missing, say so; do not create evidence to complete the sequence.
+- [ ] Add evaluations with ambiguous input, incomplete data, and unsupported claims. Compare fidelity and usefulness with existing profiles and frameworks before adopting both additions.
 
-## Perfiles y frameworks posteriores
+## Later profiles and frameworks
 
-- [ ] **Profile `easy-read`** — redacción pensada para necesidades específicas de accesibilidad cognitiva. Diferenciarlo de `plain-language`; consultar fuentes oficiales pertinentes y validar con personas destinatarias. No declarar «lectura fácil validada» por aplicar unas pautas.
-- [ ] **Framework `worked-example`** — concepto → ejemplo resuelto → regla general → nuevo caso. Complementa el perfil `feynman`: fija la secuencia didáctica, no el vocabulario. Los ejemplos hipotéticos deben identificarse como tales.
-- [ ] **Framework `comparison`** — criterios → diferencias → compromisos → elección, solo si hay opciones y datos suficientes. No inventar criterios, ventajas o recomendaciones.
+- [ ] **Profile `easy-read`** — writing for specific cognitive accessibility needs. Distinguish it from `plain-language`; consult relevant official sources and validate with the intended audience. Do not claim “validated easy read” merely because guidelines were applied.
+- [ ] **Framework `worked-example`** — concept → worked example → general rule → new case. Complements the `feynman` profile by fixing the teaching sequence rather than vocabulary. Mark hypothetical examples as such.
+- [ ] **Framework `comparison`** — criteria → differences → trade-offs → choice, only when sufficient options and data exist. Do not invent criteria, advantages, or recommendations.
 
-## Nuevos targets, por orden de prioridad
+## New targets, in priority order
 
-- [ ] **`pdf`** — documento autónomo e imprimible. Definir generación, dependencias y comprobaciones de texto seleccionable, paginación, legibilidad y metadatos; no sustituir el contenido por una imagen.
-- [ ] **`json`** — salida para otros sistemas, con esquema y validación. El perfil solo afecta a los valores de texto explicativo, no a claves ni tipos de datos. Definir cómo se entregan los archivos y qué ocurre ante datos desconocidos.
-- [ ] **`slides-html`** — presentación HTML autónoma por pantallas. Mantener legibilidad, navegación por teclado y correspondencia entre el guion y el contenido visible; validar escritorio y móvil. No requiere otra skill.
+- [ ] **`pdf`** — a self-contained, printable document. Define generation, dependencies, and checks for selectable text, pagination, readability, and metadata; do not replace the content with an image.
+- [ ] **`json`** — output for other systems, with a schema and validation. The profile affects only explanatory text values, not keys or data types. Define file delivery and handling of unknown data.
+- [ ] **`slides-html`** — a self-contained, screen-based HTML presentation. Preserve readability, keyboard navigation, and correspondence between the script and visible content; validate desktop and mobile layouts. It does not require another skill.
 
-## Decisión de producto aplicada
+## Applied product decision
 
-- [x] **Perfil predeterminado: `plain-language`.** En solicitudes generales sin perfil explícito, usar lenguaje claro en el idioma solicitado. `asd-ste100` continúa disponible mediante `--profile asd-ste100`, el alias `--format asd-ste100` o una petición explícita equivalente en lenguaje natural; mencionarlo solo como tema no lo selecciona. Mantener las evaluaciones de compatibilidad y de respuestas multilingües.
+- [x] **Default profile: `plain-language`.** For general requests without an explicit profile, use plain language in the requested language. `asd-ste100` remains available through `--profile asd-ste100`, the `--format asd-ste100` alias, or an explicit equivalent natural-language request; mentioning it only as the topic does not select it. Retain compatibility and multilingual-response evaluations.
 
-## Criterios para cada incorporación
+## Criteria for each addition
 
-1. Documentar alcance, límites y fuentes en `references/`, sin prometer conformidad con estándares cuyo texto íntegro o revisión no se haya verificado.
-2. Mantener cada eje independiente; evitar que un framework obligue a inventar datos o que un target cambie el significado.
-3. Añadir casos de activación y de calidad a `skills/explainer/evals/`; probar peticiones positivas, casos límite y peticiones similares que no deban activar la skill.
-4. Actualizar `SKILL.md`, README y registro correspondiente solo cuando la capacidad esté implementada y validada. No anunciar elementos del roadmap como disponibles.
+1. Document scope, limits, and sources in `references/` without promising conformity with standards whose full text or review has not been verified.
+2. Keep each axis independent; prevent a framework from requiring invented information or a target from changing the meaning.
+3. Add activation and quality cases to `skills/explainer/evals/`; test positive requests, edge cases, and similar requests that should not activate the skill.
+4. Update `SKILL.md`, the README, and the relevant registry only when the capability has been implemented and validated. Do not advertise roadmap items as available.

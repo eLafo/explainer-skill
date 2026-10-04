@@ -1,9 +1,9 @@
-# ASD-STE100 — fuentes oficiales
+# ASD-STE100 — official sources
 
-Editor del estándar: ASD. Páginas publicadas por el **ASD Simplified Technical English Maintenance Group (STEMG)**, que mantiene ASD-STE100. Páginas consultadas para este registro; revisa la edición vigente si cambian.
+Standard publisher: ASD. The following pages are published by the **ASD Simplified Technical English Maintenance Group (STEMG)**, which maintains ASD-STE100. These pages were consulted for this record; check the current issue if they change.
 
-1. [About STE](https://www.asd-ste100.org/about_STE.html) — describe el origen y propósito, reglas de redacción y diccionario controlado; identifica **Issue 9 (15 de enero de 2025)** con **53 reglas en 9 secciones** y aproximadamente **900 palabras aprobadas** y **1200 no aprobadas**.
-2. [FAQ oficial](https://www.asd-ste100.org/STE_faq.html) — distingue reglas y diccionario, significado y función gramatical de las palabras, términos técnicos; incluye el ejemplo `start` frente a `begin`, `commence`, `initiate` y `originate`.
-3. [Descargas oficiales](https://www.asd-ste100.org/STE_downloads.html) — indica cómo solicitar gratuitamente el PDF oficial de Issue 9 y advierte sobre la revisión de salidas de IA; **no** se ha incorporado ese PDF ni verificado la conformidad del texto de la skill con él.
+1. [About STE](https://www.asd-ste100.org/about_STE.html) — describes the origin and purpose, writing rules, and controlled dictionary; identifies **Issue 9 (January 15, 2025)** with **53 rules in 9 sections** and approximately **900 approved words** and **1,200 unapproved words**.
+2. [Official FAQ](https://www.asd-ste100.org/STE_faq.html) — distinguishes the rules and dictionary, word meaning and grammatical function, and technical terms; includes the example `start` versus `begin`, `commence`, `initiate`, and `originate`.
+3. [Official downloads](https://www.asd-ste100.org/STE_downloads.html) — explains how to request the official Issue 9 PDF at no cost and warns about reviewing AI output; that PDF has **not** been incorporated, nor has the skill text been checked for conformity with it.
 
-Estas páginas respaldan las afirmaciones resumidas, **no** sustituyen las 53 reglas completas ni el diccionario oficial. No afirmes que una respuesta de Explainer cumple ASD-STE100; en otros idiomas, solo se aplican pautas inspiradas en el estándar inglés.
+These pages support the summarized claims but **do not** replace the complete 53 rules or official dictionary. Do not claim that an Explainer response conforms to ASD-STE100; for other languages, only guidelines inspired by the English standard apply.

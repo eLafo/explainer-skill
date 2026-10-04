@@ -1,31 +1,31 @@
-# Perfil `asd-ste100` — pautas de claridad técnica
+# `asd-ste100` profile — technical clarity guidelines
 
-## Idioma y alcance
+## Language and scope
 
-ASD-STE100 (Simplified Technical English) es un estándar controlado para **inglés técnico**, principalmente documentación técnica. Estas pautas son una aproximación práctica: sin el diccionario, las reglas oficiales completas y una revisión formal, no garantizan conformidad con el estándar. Consulta `references/sources/asd-ste100.md` antes de afirmar datos sobre su edición, reglas, vocabulario o distribución.
+ASD-STE100 (Simplified Technical English) is a controlled-language standard for **technical English**, primarily for technical documentation. These guidelines are a practical approximation: without the dictionary, the complete official rules, and a formal review, they do not guarantee conformity with the standard. Consult `references/sources/asd-ste100.md` before making claims about its issue, rules, vocabulary, or distribution.
 
-- **Texto en inglés (en cualquier destino):** usa las pautas de abajo. No afirmes que el resultado cumple oficialmente ASD-STE100.
-- **Texto en cualquier otro idioma (en cualquier destino):** aplica los principios transferibles (frases breves, términos coherentes, instrucciones directas, estructura clara) en ese idioma. Llámalo «adaptación de claridad técnica inspirada en ASD-STE100» cuando sea necesario identificar el perfil, **no** «texto en ASD-STE100». No traduzcas automáticamente al inglés ni preguntes si se prefiere inglés cuando el usuario ya haya elegido otro idioma.
-- `--strict` no convierte una adaptación en otro idioma en ASD-STE100 oficial ni acredita conformidad en inglés. Si es pertinente, señala este límite en una sola nota al final; no bloquees la entrega.
-- El perfil afecta al texto en chat, Markdown o HTML; no define la maquetación ni el tipo de archivo.
+- **English text (in any target):** use the guidelines below. Do not claim that the result officially conforms to ASD-STE100.
+- **Text in any other language (in any target):** apply the transferable principles—short sentences, consistent terms, direct instructions, and clear structure—in that language. When the profile must be identified, call it an “ASD-STE100-inspired technical clarity adaptation,” **not** “ASD-STE100 text.” Do not translate automatically into English or ask whether English is preferred when the user has already selected another language.
+- `--strict` does not make an adaptation in another language official ASD-STE100 or establish conformity in English. When relevant, state this limitation in one note at the end; do not block delivery.
+- The profile affects text in chat, Markdown, or HTML. It does not define layout or file type.
 
-## Reglas de redacción
+## Writing rules
 
-- Usa frases cortas y directas. Expresa una acción por oración en los procedimientos cuando sea posible.
-- Prefiere voz activa y orden natural sujeto-verbo-objeto en el idioma de salida. Identifica el actor si está en la fuente; no lo inventes.
-- Usa palabras comunes, concretas y consistentes. Evita modismos, metáforas, jerga innecesaria y variación de sinónimos que oscurezca el sentido.
-- Prefiere verbos específicos a sustantivos abstractos cuando mantengan el significado. Conserva negaciones, prohibiciones y condiciones importantes.
-- Mantén una idea principal por oración. Divide las oraciones largas sin perder secuencia, excepciones, causas o advertencias.
-- Usa siempre el mismo término para el mismo concepto. Conserva los términos técnicos precisos cuando un sustituto pueda alterar el significado.
-- Conserva datos, cifras, unidades, referencias, nombres, identificadores, comandos y citas exactas. Si se pide traducir una cita, distingue la traducción del texto original.
-- En procedimientos, conserva el orden de las acciones. No conviertas descripciones en instrucciones ni instrucciones en simples descripciones.
-- Para documentos nuevos, usa títulos descriptivos y secciones solo cuando ayuden a navegar el contenido. No rellenes huecos con datos inventados.
+- Use short, direct sentences. In procedures, express one action per sentence where possible.
+- Prefer active voice and the output language’s natural subject-verb-object order. Identify the actor when the source provides one; do not invent one.
+- Use common, concrete, and consistent words. Avoid idioms, metaphors, unnecessary jargon, and synonym variation that obscures meaning.
+- Prefer specific verbs to abstract nouns when doing so preserves meaning. Preserve important negations, prohibitions, and conditions.
+- Keep one main idea per sentence. Split long sentences without losing sequence, exceptions, causes, or warnings.
+- Always use the same term for the same concept. Preserve precise technical terms when a substitute could change the meaning.
+- Preserve data, figures, units, references, names, identifiers, commands, and exact quotations. If asked to translate a quotation, distinguish the translation from the original text.
+- Preserve the order of actions in procedures. Do not turn descriptions into instructions or instructions into mere descriptions.
+- For new documents, use descriptive headings and sections only when they aid navigation. Do not fill gaps with invented information.
 
-## Comprobación final
+## Final check
 
-1. ¿El texto está en el idioma solicitado o, si no se especificó, en el de la petición?
-2. ¿Conserva información, límites, condiciones y advertencias de la fuente cuando la hay?
-3. ¿Cada oración expresa una idea clara y utiliza términos coherentes?
-4. ¿Las instrucciones mantienen actor, acción y orden sin inventar pasos?
-5. ¿Los datos y elementos que no deben cambiar permanecen intactos?
-6. ¿La denominación evita presentar una adaptación a otro idioma como ASD-STE100 oficial y evita afirmar certificación?
+1. Is the text in the requested language or, if none was specified, the language of the request?
+2. Does it preserve the source’s information, limits, conditions, and warnings?
+3. Does each sentence express one clear idea and use consistent terms?
+4. Do instructions preserve the actor, action, and order without inventing steps?
+5. Do data and elements that must not change remain intact?
+6. Does the label avoid presenting another-language adaptation as official ASD-STE100 or claiming certification?

@@ -1,9 +1,9 @@
-# `why-how-what` — relevancia, funcionamiento, resultado
+# `why-how-what` — relevance, operation, result
 
-Adaptación explicativa del orden «Why → How → What», asociado al Golden Circle de Simon Sinek (fuente primaria: `references/sources/golden-circle.md`). Úsalo para presentar una idea cuya relevancia **está sustentada**. No atribuyas intenciones o motivaciones a personas u organizaciones si la fuente no las indica.
+An explanatory adaptation of the “Why → How → What” order associated with Simon Sinek’s Golden Circle (primary source: `references/sources/golden-circle.md`). Use it to present an idea whose relevance **is supported**. Do not attribute intentions or motivations to people or organizations unless the source states them.
 
-1. **Why / por qué importa:** da el contexto o la necesidad conocida. Si no se conoce el motivo, empieza por una relevancia observable o no uses esta fase.
-2. **How / cómo funciona:** explica el mecanismo, las reglas o el proceso conocido.
-3. **What / qué es o qué resulta:** define el objeto o señala el resultado que la fuente documenta. Si el lector necesita primero una definición mínima para entender el resto, dásela en una oración antes de la secuencia.
+1. **Why / why it matters:** give the known context or need. If the reason is unknown, begin with observable relevance or omit this stage.
+2. **How / how it works:** explain the known mechanism, rules, or process.
+3. **What / what it is or produces:** define the subject or state the result documented by the source. If the reader first needs a minimal definition to understand the rest, give it in one sentence before the sequence.
 
-Comprobación: ¿el «por qué» es un hecho o una necesidad explícita, no un relato inventado? ¿Se conservan condiciones, advertencias y datos? ¿La explicación sigue siendo comprensible sin alterar el orden obligatorio de acciones?
+Check: Is the “why” a fact or an explicit need rather than an invented narrative? Are conditions, warnings, and data preserved? Does the explanation remain understandable without changing the required order of actions?

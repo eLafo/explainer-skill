@@ -1,22 +1,22 @@
-# Perfil `feynman` — explicar para entender
+# `feynman` profile — explain to understand
 
-Perfil pedagógico inspirado en la técnica de explicación asociada a Richard Feynman. No es un estándar formal ni afirma reproducir un método oficial; `references/sources/README.md` registra que no hay una especificación oficial verificada para este perfil. Determina **cómo desarrollar las ideas y el vocabulario**, no el orden narrativo (`--framework`) ni el destino (`--target`). Se aplica en cualquier idioma.
+A teaching profile inspired by the explanation technique associated with Richard Feynman. It is not a formal standard and does not claim to reproduce an official method; `references/sources/README.md` records that this skill has no verified official specification for the profile. It determines **how ideas and vocabulary are developed**, not the narrative order (`--framework`) or delivery target (`--target`). It applies in any language.
 
-## Redacción
+## Writing
 
-1. Identifica la idea central y exprésala con palabras que pueda entender la audiencia indicada. Si no se especifica audiencia, escribe para una persona sin conocimientos previos del tema.
-2. Descompón los conceptos necesarios en partes pequeñas. Define cada término técnico antes de usarlo de forma intensiva; conserva su nombre exacto cuando es necesario para no perder precisión.
-3. Conecta causa y efecto mediante pasos comprensibles. No saltes de una premisa a una conclusión sin explicar el mecanismo.
-4. Usa un ejemplo concreto, pequeño y correcto si mejora la comprensión. Una analogía es opcional: di dónde deja de ser válida y no la presentes como descripción literal del sistema.
-5. Si aparece una laguna en la fuente o en la explicación, no la llenes con conjeturas: verifica con una fuente fiable si se puede, señala la incertidumbre o pregunta.
-6. Relee la explicación desde la perspectiva de la audiencia. Reduce jerga y repeticiones sin eliminar condiciones, cifras, riesgos ni matices necesarios.
+1. Identify the central idea and express it in words the specified audience can understand. If no audience is specified, write for someone with no prior knowledge of the topic.
+2. Break the necessary concepts into small parts. Define each technical term before using it extensively; preserve its exact name when necessary for accuracy.
+3. Connect cause and effect through understandable steps. Do not jump from a premise to a conclusion without explaining the mechanism.
+4. Use a small, concrete, and accurate example if it improves understanding. An analogy is optional: explain where it stops applying, and do not present it as a literal description of the system.
+5. If the source or explanation has a gap, do not fill it with conjecture. Verify it with a reliable source when possible, identify the uncertainty, or ask.
+6. Reread the explanation from the audience’s perspective. Reduce jargon and repetition without removing necessary conditions, figures, risks, or nuances.
 
-## Límites
+## Limits
 
-- No equipares «fácil» con «inexacto»: conserva hechos y distinciones relevantes.
-- No añadas una prueba, experimento, ejemplo factual o analogía que contradiga la fuente. Marca los ejemplos hipotéticos como tales.
-- No conviertas por defecto la respuesta en un cuestionario ni obligues a añadir un ejemplo si la petición requiere brevedad.
+- Do not equate “easy” with “inaccurate”; preserve relevant facts and distinctions.
+- Do not add evidence, experiments, factual examples, or analogies that contradict the source. Mark hypothetical examples as such.
+- Do not turn the response into a quiz by default or require an example when the request calls for brevity.
 
-## Comprobación
+## Check
 
-¿Puede el lector explicar la idea principal con sus palabras? ¿Se entienden todos los términos nuevos? ¿El ejemplo ilustra el mecanismo sin fingir ser evidencia? ¿Se conservan límites e incertidumbres de la fuente?
+Can the reader explain the main idea in their own words? Are all new terms understandable? Does the example illustrate the mechanism without pretending to be evidence? Are the source’s limits and uncertainties preserved?

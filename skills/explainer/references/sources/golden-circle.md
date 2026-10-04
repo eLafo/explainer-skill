@@ -1,5 +1,5 @@
-# Golden Circle — fuente primaria
+# Golden Circle — primary source
 
-[Simon Sinek: The Golden Circle](https://simonsinek.com/golden-circle/) — página de su organización que describe los anillos WHY, HOW y WHAT y el orden desde WHY hacia fuera.
+[Simon Sinek: The Golden Circle](https://simonsinek.com/golden-circle/) — a page from his organization that describes the WHY, HOW, and WHAT rings and the order from WHY outward.
 
-El framework `why-how-what` de Explainer usa ese recorrido como herramienta para **explicar** una idea. La fuente presenta el Golden Circle en el contexto de inspiración, liderazgo y organizaciones; no sostiene que cada documento técnico deba seguir exactamente esa secuencia. No atribuyas a Sinek reglas específicas de Explainer como «omitir fases si la fuente no las sustenta»: son salvaguardas añadidas aquí para preservar la fidelidad.
+Explainer’s `why-how-what` framework uses that path as a tool to **explain** an idea. The source presents the Golden Circle in the context of inspiration, leadership, and organizations; it does not state that every technical document must follow exactly that sequence. Do not attribute Explainer-specific rules to Sinek, such as omitting stages unsupported by the source. Those safeguards were added here to preserve fidelity.
