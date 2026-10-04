@@ -1,11 +1,11 @@
 # Changelog
 
-## [0.3.0](https://github.com/eLafo/explainer-skill/compare/v1.0.0...v0.3.0) (2026-10-04)
+## [0.3.0](https://github.com/eLafo/explainer-skill/compare/v0.2.0...v0.3.0) (2026-10-04)
 
 
-### Bug Fixes
+### Features
 
-* prepare corrected 0.3.0 release ([db2cc34](https://github.com/eLafo/explainer-skill/commit/db2cc34c5bc8d8fdc6d9f8dd50635ddf229c2969))
+* use `plain-language` by default while keeping explicit profiles available ([e3536db](https://github.com/eLafo/explainer-skill/commit/e3536db780b6b46d608457f8e121225025114cc1))
 
 ## [0.2.0](https://github.com/eLafo/explainer-skill/compare/v0.1.0...v0.2.0) (2026-10-03)
 
