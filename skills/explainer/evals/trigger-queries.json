@@ -1,18 +1,82 @@
 [
   {
     "query": "Explain what a cache is with a simple analogy for someone who is starting to program.",
-    "should_trigger": true
+    "should_trigger": true,
+    "split": "train"
   },
   {
     "query": "Rewrite this instruction in clear technical English following ASD-STE100 guidelines: If the pressure is not 0 bar, do not open the valve.",
-    "should_trigger": true
+    "should_trigger": true,
+    "split": "train"
   },
   {
     "query": "Put this letter into plain language without losing its deadlines or conditions.",
-    "should_trigger": true
+    "should_trigger": true,
+    "split": "train"
   },
   {
     "query": "Simplify this Python function without changing its behavior: def double(x): return x + x",
-    "should_trigger": false
+    "should_trigger": false,
+    "split": "train"
+  },
+  {
+    "query": "Explain this Python function to a beginner without changing it: def double(x): return x + x",
+    "should_trigger": true,
+    "split": "train"
+  },
+  {
+    "query": "Refactor this function to reduce repetition: def total(xs): return sum(xs) + sum(xs)",
+    "should_trigger": false,
+    "split": "train"
+  },
+  {
+    "query": "Optimize the implementation of this loop for speed; I need updated Python code, not an explanation.",
+    "should_trigger": false,
+    "split": "train"
+  },
+  {
+    "query": "Write a JavaScript function that doubles every number in an array.",
+    "should_trigger": false,
+    "split": "train"
+  },
+  {
+    "query": "Explain why this JavaScript expression returns false, without modifying it: 0 === false",
+    "should_trigger": true,
+    "split": "validation"
+  },
+  {
+    "query": "Make this legal notice understandable for tenants while keeping the exceptions and deadlines.",
+    "should_trigger": true,
+    "split": "validation"
+  },
+  {
+    "query": "Explain recursion using the Feynman approach for a reader who knows loops.",
+    "should_trigger": true,
+    "split": "validation"
+  },
+  {
+    "query": "Describe what a retry policy does in plain language for our customer support team.",
+    "should_trigger": true,
+    "split": "validation"
+  },
+  {
+    "query": "Fix the off-by-one bug in this function and return corrected code: def last(xs): return xs[len(xs)]",
+    "should_trigger": false,
+    "split": "validation"
+  },
+  {
+    "query": "Reduce the complexity of the SQL query implementation; return an equivalent optimized query: SELECT * FROM orders WHERE status = 'open'",
+    "should_trigger": false,
+    "split": "validation"
+  },
+  {
+    "query": "Translate this Python loop into JavaScript code: for x in xs: print(x)",
+    "should_trigger": false,
+    "split": "validation"
+  },
+  {
+    "query": "Clean up this shell script's implementation without changing its behavior: for x in a b; do echo $x; done",
+    "should_trigger": false,
+    "split": "validation"
   }
 ]

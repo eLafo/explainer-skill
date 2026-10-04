@@ -83,7 +83,7 @@
       "id": 14,
       "prompt": "/skill:explainer --target chat --file ./out/do-not-create.md explain ASD-STE100",
       "expected_output": "Communicates the conflict between chat and file and does not create out/do-not-create.md.",
-      "assertions": ["The out/do-not-create.md file does not exist", "Explains that --file is not valid with chat"]
+      "assertions": ["The out/do-not-create.md file does not exist", "Explicitly communicates that chat does not support file output; equivalent wording is accepted, but merely reporting that no file was created is insufficient"]
     },
     {
       "id": 15,
@@ -126,6 +126,24 @@
       "prompt": "/skill:explainer --target chat --language en explain this notice: You may request a review within 10 working days. Requests after that deadline will not be accepted.",
       "expected_output": "An English response using plain language by default that preserves the option, deadline, and consequence.",
       "assertions": ["Responds in English", "Preserves 10 working days", "Does not turn the option into an obligation", "Preserves the consequence of delay"]
+    },
+    {
+      "id": 22,
+      "prompt": "/skill:explainer --target chat --file ./out/no-file-es.md --language es explain this Python function to a beginner without changing it: def double(x): return x + x",
+      "expected_output": "A Spanish explanation of the function, with a clear notice that chat does not support file output, and no generated files or code changes.",
+      "assertions": ["Responds in Spanish", "Explicitly communicates that chat does not support file output, in any equivalent wording", "Creates no files", "Explains that the function returns x + x without modifying the implementation"]
+    },
+    {
+      "id": 23,
+      "prompt": "/skill:explainer --target markdown explain this code to a beginner, without rewriting it: const result = items.map(item => item.price);",
+      "expected_output": "A copyable Markdown explanation of mapping each item's price into a new array, without changing the implementation.",
+      "assertions": ["Delivers one code block tagged markdown", "Explains that map produces an array of prices", "Does not propose or perform implementation changes"]
+    },
+    {
+      "id": 24,
+      "prompt": "/skill:explainer --target chat --file ./out/no-file-natural-es.md explain in Spanish this notice: You may request a review within 10 working days. Late requests will not be accepted.",
+      "expected_output": "A Spanish chat explanation preserving the option, deadline, and consequence, with an explicit file-output incompatibility notice and no files.",
+      "assertions": ["Responds in Spanish", "Preserves 10 working days in an accurate Spanish translation", "Does not turn the option into an obligation", "Preserves the consequence of delay", "Explicitly communicates that chat does not support file output, in any equivalent wording", "Creates no files"]
     }
   ]
 }

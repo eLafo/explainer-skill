@@ -53,7 +53,9 @@ The installable skill is in [`skills/explainer/`](skills/explainer/).
 - [`skills/explainer/evals/evals.json`](skills/explainer/evals/evals.json) contains evaluation cases, expected results, and assertions.
 - [`skills/explainer/evals/trigger-queries.json`](skills/explainer/evals/trigger-queries.json) contains cases for evaluating skill activation.
 
-The evaluation cases are proposals. The complete suite has not yet been run to measure reliability.
+Run the quality and activation evaluations with the repository-level [evaluation runner](scripts/README.md). It compares skill snapshots in isolated sessions, records evidence, and repeats activation queries three times. Generated artifacts are kept outside the installable skill and must not be committed.
+
+A local comparison using `openai-codex/gpt-6.1-sol` passed all 24 quality cases for the revised skill versus 22/24 for the previous version. Both versions passed all 16 activation queries by majority across three runs; the revised skill missed one positive query in one of 48 individual executions. These results are observations for that model and configuration, not a general reliability guarantee or proof of activation improvement. See the [comparison report](docs/evaluation-results.md) for the method and limitations.
 
 ## Releases
 

@@ -1,6 +1,6 @@
 ---
 name: explainer
-description: "Generate or rewrite explanations in any language. Apply an independent explanation profile (ASD-STE100, Feynman, or plain language inspired by ISO 24495-1) and narrative framework; deliver in chat, copyable Markdown, or HTML. Use when asked to explain, simplify, or present content in one of these targets."
+description: "Use when asked to explain concepts or code, simplify explanatory prose, or rewrite documents for an audience in any language. Apply an independent explanation profile (ASD-STE100, Feynman, or plain language inspired by ISO 24495-1) and narrative framework; deliver in chat, copyable Markdown, or HTML. Explaining code is in scope; writing, modifying, refactoring, debugging, or optimizing executable code is not. Do not activate for code changes merely because the request says simplify."
 license: MIT
 metadata:
   author: eLafo
@@ -10,6 +10,10 @@ metadata:
 # Explainer
 
 Organize an explanation without confusing four decisions: **what is known** (source or topic), **how it is explained and written** (profile), **the order in which it is understood** (narrative framework), and **how it is delivered** (target). The document form (article, FAQ, or procedure) is optional and separate from the framework. Apply the profile to the text without changing the facts. The skill supports any language.
+
+## Scope
+
+Explain concepts, documents, and code without changing executable behavior. Requests to write, modify, refactor, debug, or optimize code belong to coding workflows, not this skill. A request to explain code remains in scope; a request to simplify its implementation does not. For mixed requests, apply this skill only to the explanatory portion.
 
 ## Interface
 
@@ -23,7 +27,7 @@ The arguments are conventions interpreted by the agent, **not** flags handled by
 - `--target`: `chat` (default), `markdown` (a copyable block with an optional file), or `html` (a complete file). Read `references/targets.md` for delivery and verification requirements.
 - `--language`: explicit output language. Priority: `--language` flag → natural-language request (“in English,” “write it in French”) → language of the request. **Do not** default to the source text’s language when the user requests another one. Translate when necessary and preserve figures, conditions, and warnings. Ask only when a multilingual request gives no clear preference.
 - `--audience`: adapt terms and detail to the audience without inventing information.
-- `--file <path>`: for `markdown`, also save the same content in a `.md` file; for `html`, specify the output path. It does not apply to `chat`. Do not overwrite an existing file without permission.
+- `--file <path>`: for `markdown`, also save the same content in a `.md` file; for `html`, specify the output path. It is invalid with `chat`: explicitly explain the incompatibility, create no files, and still deliver the explanation in chat. Do not silently ignore the flag or switch targets. Do not overwrite an existing file without permission.
 - `--strict`: review the available rules more rigorously; it never means certification or official verification.
 - `--keep-structure`: when rewriting, preserve headings, lists, tables, and order where possible. If it conflicts with an explicit framework or form, ask which takes priority.
 
@@ -40,7 +44,7 @@ The arguments are conventions interpreted by the agent, **not** flags handled by
 ## Workflow
 
 1. Determine whether the user wants a new document about a topic or a rewrite of existing text. If the user says “the previous one,” use the most recent relevant response. Resolve **the output language first**, including natural-language requests, then the audience, profile, framework, form, and target. If essential information is missing, ask or limit the scope; do not invent specifications.
-2. Before writing, read the selected profile reference in full **even when `--profile` was not specified**. If a framework other than `auto` is selected, read its reference. For `markdown` or `html`, read `references/targets.md`. Before stating facts about a standard or attributing a method, consult the relevant entry in `references/sources/README.md` and its primary sources; do not invent an official source when no verified entry exists. For `asd-ste100`, distinguish technical English from an adaptation to another language: do not change the requested language to fit the standard.
+2. Before drafting, check delivery arguments. If `chat` and `--file` are combined, explicitly tell the user that chat does not support file output, then continue in chat without creating a file. This specific conflict does not require clarification; other incompatible combinations still do. Before writing, read the selected profile reference in full **even when `--profile` was not specified**. If a framework other than `auto` is selected, read its reference. For `markdown` or `html`, read `references/targets.md`. Before stating facts about a standard or attributing a method, consult the relevant entry in `references/sources/README.md` and its primary sources; do not invent an official source when no verified entry exists. For `asd-ste100`, distinguish technical English from an adaptation to another language: do not change the requested language to fit the standard.
 3. Extract claims, figures, conditions, warnings, and uncertainties from the source. Apply the framework **only to supported content**. Do not invent reasons, problems, evidence, causes, recommendations, or steps to fill template slots. If a necessary element is missing, omit it honestly or ask when its absence prevents an answer.
 4. Apply the form and target. Preserve the required order of actions and safety warnings: neither a narrative framework nor an editorial form may reorder a hazardous procedure. If the requested combination is incompatible, explain the conflict and ask the user to choose.
 5. Verify that **the final text is in the requested language**, not the source language when they differ. After translation, compare figures, conditions, negations, and warnings with the source. Review fidelity, clarity, profile limits, form, and actual delivery. Deliver the text or a file path; mention only relevant limitations, such as not attributing official conformity to an adaptation.

@@ -4,7 +4,7 @@ A target determines how the explanation **is delivered**, not which vocabulary i
 
 ## `chat` (default)
 
-Respond directly in the conversation. Use headings or short lists when helpful, but do not wrap the entire response in a code block. Do not create files. `--file` is not valid with this target.
+Respond directly in the conversation. Use headings or short lists when helpful, but do not wrap the entire response in a code block. Do not create files. `--file` is not valid with this target. When both are requested, explicitly explain that chat does not support file output, create no files, and deliver the explanation in chat. Do not merely say that no file was created, silently ignore the flag, or change the target. Any wording that clearly communicates the incompatibility is acceptable.
 
 ## `markdown`
 
