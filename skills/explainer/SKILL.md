@@ -4,7 +4,7 @@ description: "Use when asked to explain concepts or code, simplify explanatory p
 license: MIT
 metadata:
   author: eLafo
-  version: "0.3.0" # x-release-please-version
+  version: "0.3.1" # x-release-please-version
 ---
 
 # Explainer

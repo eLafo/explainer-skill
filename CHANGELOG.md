@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/eLafo/explainer-skill/compare/v0.3.0...v0.3.1) (2026-10-04)
+
+
+### Bug Fixes
+
+* **explainer:** clarify scope and chat file conflicts ([a4d8e79](https://github.com/eLafo/explainer-skill/commit/a4d8e79667b21ca356165f272c570a510e80d366))
+
 ## [0.3.0](https://github.com/eLafo/explainer-skill/compare/v0.2.0...v0.3.0) (2026-10-04)
 
 
